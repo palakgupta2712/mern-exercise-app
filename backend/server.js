@@ -2,6 +2,9 @@ const express = require('express')
 const cors = require('cors')
 //Import the mongoose module
 const mongoose = require('mongoose')
+//Load the routers 
+const usersRouter = require('./routes/user')
+const exercisesRouter = require('./routes/exercise')
 
 require('dotenv').config()
 
@@ -9,6 +12,9 @@ const app = express()
 const port = process.env.PORT || 3000
 app.use(cors())
 app.use(express.json())
+
+app.use('/exercises', exercisesRouter)
+app.use('/users', usersRouter)
 
 //Set up default mongoose connection
 const uri = 'mongodb://localhost:27017/myapp';
