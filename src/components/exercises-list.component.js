@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function ExercisesList(){
-    return(
-        <div class="container">
-            <h1> Welcome to Exercise List Page</h1>
-        </div> 
-    )
+class ExercisesList extends Component{
+    render(){
+        return(
+            <div className="container">
+                <h1> Welcome to Exercise List Page</h1>
+            </div> 
+        )
+    }
 }
 export default ExercisesList
