@@ -15,6 +15,10 @@ const exerciseSchema = new Schema({
         type : Number, 
         reuqired : true
     },
+    date : {
+        type : Date,
+        required : true
+    },
 },   {
     timestamps : true,
 }
